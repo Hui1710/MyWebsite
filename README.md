@@ -1,22 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Huzaifah Fatima Syed — Financial Analysis Portfolio
 
-## Getting Started
+A static Next.js portfolio featuring financial modeling, valuation, analytics, experience, education, and downloadable resume content.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production build
+
+```bash
+npm run build
+npm run start
+```
 
 ## Learn More
 
