@@ -1,3 +1,8 @@
+// Add the GitHub Pages repository prefix only during the Actions build.
+// Assets in public/ need this prefix because plain <img> and <a> tags
+// do not automatically apply Next.js basePath.
+const assetBase = process.env.GITHUB_ACTIONS === "true" ? "/MyWebsite" : "";
+
 // NAVIGATION LINKS: This list supplies the section names and matching page anchors.
 const navItems = [
   ["Impact", "impact"],
@@ -30,7 +35,7 @@ export default function Home() {
           <div className="heroActions">
             <a className="button buttonDark" href="#projects">View Projects <span>↘</span></a>
             <a className="button buttonLight" href="https://www.linkedin.com/in/huzaifah-fatima-syed" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-            <a className="textLink" href="/Huzaifah-Fatima-Syed-Resume.pdf" target="_blank">View Resume <span>↗</span></a>
+            <a className="textLink" href={`${assetBase}/Huzaifah-Fatima-Syed-Resume.pdf`} target="_blank">View Resume <span>↗</span></a>
           </div>
         </div>
         <div className="heroVisual" aria-label="Financial analysis portfolio visual">
@@ -41,7 +46,7 @@ export default function Home() {
               <span /><span /><span /><span /><span />
             </div>
             <div className="chartLine"><i /><i /><i /><i /><i /></div>
-            <img className="portraitInitials" src="/Hijabi avt.png" alt="Illustration of Huzaifah working on a laptop" />
+            <img className="portraitInitials" src={`${assetBase}/Hijabi avt.png`} alt="Illustration of Huzaifah working on a laptop" />
           </div>
         </div>
       </section>
@@ -114,7 +119,7 @@ export default function Home() {
       {/* CONTACT: Email, LinkedIn, and downloadable resume links. */}
       <section className="contact" id="contact">
         <div><p className="sectionLabel">Let&apos;s work together</p><h2>Open to finance<br />and analytics roles.</h2></div>
-        <div className="contactLinks"><a href="mailto:fshuzaifah@gmail.com"><span>Email</span>fshuzaifah@gmail.com ↗</a><a href="https://www.linkedin.com/in/huzaifah-fatima-syed" target="_blank" rel="noreferrer"><span>LinkedIn</span>View profile ↗</a><a href="/Huzaifah-Fatima-Syed-Resume.pdf" target="_blank"><span>Resume</span>Download PDF ↗</a></div>
+        <div className="contactLinks"><a href="mailto:fshuzaifah@gmail.com"><span>Email</span>fshuzaifah@gmail.com ↗</a><a href="https://www.linkedin.com/in/huzaifah-fatima-syed" target="_blank" rel="noreferrer"><span>LinkedIn</span>View profile ↗</a><a href={`${assetBase}/Huzaifah-Fatima-Syed-Resume.pdf`} target="_blank"><span>Resume</span>Download PDF ↗</a></div>
       </section>
 
       {/* FOOTER: Closing logo, copyright, and back-to-top link. */}
