@@ -1,7 +1,5 @@
-// Add the GitHub Pages repository prefix only during the Actions build.
-// Assets in public/ need this prefix because plain <img> and <a> tags
-// do not automatically apply Next.js basePath.
-const assetBase = process.env.GITHUB_ACTIONS === "true" ? "/MyWebsite" : "";
+// GitHub Pages project URLs include /MyWebsite before public assets.
+const assetBase = "/MyWebsite";
 
 // NAVIGATION LINKS: This list supplies the section names and matching page anchors.
 const navItems = [
